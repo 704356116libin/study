@@ -1,0 +1,40 @@
+<?php
+/**
+ * 企业的一些配置信息
+ */
+return [
+  'give_email_count'=>20,//赠送的免费邮件条数
+  'give_sms_count'=>20,//赠送的免费短信条数
+  //默认的网盘容量在oss配置文件中
+    'basis_limit'=>[
+        [
+            'type'=>'oss',
+            'type_number'=>5*1024*1024,
+        ],
+        [
+          'type'=>'sms',
+          'type_number'=>200,
+        ],
+        [
+            'type'=>'voice',
+            'type_number'=>200,
+        ],
+        [
+            'type'=>'e-mail',
+            'type_number'=>200,
+        ],
+        [
+            'type'=>'partner',
+            'type_number'=>100,
+        ],
+        [
+            'type'=>'external_contact',
+            'type_number'=>100,
+        ],
+        [
+            'type'=>'staff_number',
+            'type_number'=>200,
+        ],
+
+    ]
+];

@@ -1,0 +1,57 @@
+$base_color:#1890ff;
+.work-notice {
+    .defaultColor {
+        color: $base_color;
+    }
+    .ant-list-lg .ant-list-item {
+        padding: 0;
+    }
+    .noticeWrapper {
+        border: none;
+    }
+    .noticeTop {
+        color: #E14747;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .noticeMess {
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+    }
+    .antd-pro-header-search-headerSearch .antd-pro-header-search-input,
+    .antd-pro-header-search-headerSearch .antd-pro-header-search-input:hover,
+    .antd-pro-header-search-headerSearch .antd-pro-header-search-input:focus {
+        border-bottom: none;
+    } // 搜索框 
+    .extraContentSearch {
+        margin-left: 16px;
+        width: 272px;
+    }
+    @media screen and (max-width: 768px) {
+        .extraContentSearch {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    .ant-list-vertical .ant-list-item-meta {
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ant-list-pagination {
+        text-align: center;
+    }
+    .ant-modal-footer {
+        border-top: none;
+    }
+    .ant-modal-header {
+        border-bottom: none;
+        padding: 16px 24px 0px 24px;
+    }
+    .ant-modal-footer button+button {
+        margin-left: 18px;
+    }
+    .ant-modal-body {
+        padding: 8px 24px 15px 24px;
+    }
+}

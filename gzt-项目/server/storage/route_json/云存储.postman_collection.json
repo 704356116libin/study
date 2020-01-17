@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "d3a343af-8b78-4d5d-befc-fab5c62ee237",
+		"name": "云存储",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "企业云",
+			"item": [
+				{
+					"name": "企业云-目录删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "path",
+									"value": "demo/",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "7Y8vPN11545",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_oss_deleteDir",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_oss_deleteDir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "创建目录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "path",
+									"value": "demo/demo/demo/",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "7Y8vPN11545",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_oss_makeDir",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_oss_makeDir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取指定目录下的--目录&文件信息",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://{{host}}/api/c_oss_get_directory_to_info?target_directory=&company_id=7Y8vPN11545",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_oss_get_directory_to_info"
+							],
+							"query": [
+								{
+									"key": "target_directory",
+									"value": ""
+								},
+								{
+									"key": "company_id",
+									"value": "7Y8vPN11545"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "复制文件到指定目录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_id",
+									"value": "7Y8vPN11545",
+									"type": "text"
+								},
+								{
+									"key": "target_directory",
+									"value": "demo/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_oss_copy_file_to_path",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_oss_copy_file_to_path"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "文件名的更改",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "roles.xlsx",
+									"type": "text"
+								},
+								{
+									"key": "directory",
+									"value": "company/company1/公告附件/",
+									"type": "text"
+								},
+								{
+									"key": "file_id",
+									"value": "7Y8vPN11545",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_oss_update_file_name",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_oss_update_file_name"
+							]
+						},
+						"description": "文件名合法性校验\n当前目录是否有重名文件\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "个人云",
+			"item": [
+				{
+					"name": "新建目录(相对根路径)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/u_oss_makeDir?path=/目录2",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"u_oss_makeDir"
+							],
+							"query": [
+								{
+									"key": "path",
+									"value": "/目录2",
+									"description": "只需要相对于根目录的路径(/user/user1--路径用户不可见)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除目录(相对根目录)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/u_oss_deleteDir?path=/目录2",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"u_oss_deleteDir"
+							],
+							"query": [
+								{
+									"key": "path",
+									"value": "/目录2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取某用户的云空间已使用大小",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/u_oss_getNowSize?path=/目录1",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"u_oss_getNowSize"
+							],
+							"query": [
+								{
+									"key": "path",
+									"value": "/目录1",
+									"description": "(相对路径)"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,65 @@
+$notice-color: #00a0ea;
+.ruleColor {
+  color: #e61717;
+}
+
+.noticeWrapper {
+  border-bottom: 1px solid #ddd;
+}
+
+.addNotice {
+  padding: 1px 43px;
+  height: 36px;
+  line-height: 16px;
+  font-size: 16px;
+  background: #00a0ea;
+}
+
+.noticeSider {
+  border-right: 1px solid #eee;
+}
+
+.addSection {
+  padding: 0 18px;
+  color: $notice-color;
+  cursor: pointer;
+}
+
+.formMargin {
+  margin-right: 10px;
+}
+
+.categoryInput {
+  padding: 0;
+  font-size: 16px;
+}
+
+.categoryInput,
+.categoryInput:focus,
+.categoryInput:hover {
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
+}
+
+.operatColumn {
+  display: none;
+}
+
+.navigation-list:hover .operatColumn {
+  display: block;
+  float: right;
+  padding-right: 5px;
+}
+
+.noticeText {
+  padding: 16px 30px;
+  color: #333;
+  &:hover {
+    background: #e6f7ff;
+  }
+}
+
+.ant-list-item-meta-title {
+  margin: 0;
+}

@@ -1,0 +1,863 @@
+{
+	"info": {
+		"_postman_id": "c1574e29-74d1-44f9-8450-84a1fc1f5137",
+		"name": "审批",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "测试",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"考勤\",\r\n\"title\":\"123ttt\",\r\n\"description\":\"哈gfjkdj恢复\",\r\n\"formArea\":[1],\r\n\"limitTime\":\"unlimited\",\r\n\"formEdit\":true,\r\n\"annex\": [\"www\"],\r\n\"content\": \"<p>fsdfsdfsd</p>\",\r\n\"notification\": [\"实时通知\"],\r\n\"formPeople\": [\"参与人\"],\r\n\"participantsId\": \"6,3,1\",\r\n\"principalId\":6\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/approval_test?type_id=全部&page=1&page_size=10&status=全部&type=抄送给我的&approval_id=8",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"approval_test"
+					],
+					"query": [
+						{
+							"key": "type_id",
+							"value": "全部"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						},
+						{
+							"key": "status",
+							"value": "全部"
+						},
+						{
+							"key": "type",
+							"value": "抄送给我的"
+						},
+						{
+							"key": "approval_id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "添加审批类型",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "chuqin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_addType",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_addType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "添加审批模板",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "{{Accept}}"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{accesstoken}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"请假\",\r\n\"form_template\":{\"input\":\"input\",\"select\":{\"select1\":\"select1\",\"select2\":\"select2\"},\"data\":\"data\"},\r\n\"process_template\":{\r\n\t\"1\": {\r\n\t\t\"type\": \"会签\",\r\n\t\t\"Approver\": [\r\n\t\t\t{\r\n\t\t\t\t\"user_id\": 1,\r\n\t\t\t\t\"name\": \"大锤\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"user_id\": 2,\r\n\t\t\t\t\"name\": \"棕楠\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"user_id\": 3,\r\n\t\t\t\t\"name\": \"李三\"\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"2\": {\r\n\t\t\"type\": \"或签\", \r\n\t\t\"Approver\": [\r\n\t\t\t{\r\n\t\t\t\t\"user_id\": 1,\r\n\t\t\t\t\"name\": \"大锤\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"user_id\": 2,\r\n\t\t\t\t\"name\": \"棕楠\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"user_id\": 3,\r\n\t\t\t\t\"name\": \"李三\"\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n},\r\n\"cc_users\":[\r\n\t{\r\n\t\t\"user_id\":1,\r\n\t\t\"name\":\"张\"\r\n\t},\r\n\t{\r\n\t\t\"user_id\":2,\r\n\t\t\"name\":\"马\"\r\n\t}\r\n],\r\n\"type_id\":1,\r\n\"approval_method\":\"自由流程\",\r\n\"description\":\"lalalalalal\",\r\n\"per\":{\"department_id\":[1,2],\"staff_id\":[1,2,3]},\r\n\"company_id\":5\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_addTemplate",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_addTemplate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "创建审批申请",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"\",\r\n\"form_template\":{\"input\":\"input\",\"input1\":\"input\",\"select\":{\"select1\":\"select1\",\"select2\":\"select2\"},\"data\":\"data\"},\r\n\"process_template\":{\"1\": {\"type\": \"会签\", \"Approver\": [1, 2, 3]}, \"2\": {\"type\": \"或签\", \"Approver\": [4, 5]}},\r\n\"type_id\":2,\r\n\"ccIds\":[1,2,3],\r\n\"approval_method\":\"自由流程\",\r\n\"description\":\"fafaassdaddsa\",\r\n\"company_id\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_create",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "详情",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_detail?id=2",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "审批列表",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "{{Accept}}"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{accesstoken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_list?type_id=all&page=1&page_size=10&status=all&type=myInitiated",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_list"
+					],
+					"query": [
+						{
+							"key": "type_id",
+							"value": "all"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						},
+						{
+							"key": "status",
+							"value": "all"
+						},
+						{
+							"key": "type",
+							"value": "myInitiated"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查找所有可用模板",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_ablTemplateList",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_ablTemplateList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "导出数据",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_export?id=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_export"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "选择模板",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_selectTem?id=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_selectTem"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "管理模板列表",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_sysTemList",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_sysTemList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "审批管理拖拽排序保存入数据库",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"3\":3,\n\t\"2\":2,\n\t\"1\":1,\n\t\"4\":4\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_saveSequence",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_saveSequence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "编辑审批类型",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_editApprovalType?id=1&name=shahah",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_editApprovalType"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "shahah"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "编辑审批模板",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_editTemplate?id=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_editTemplate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "保存编辑后的审批模板",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\":1,\r\n\"name\":\"自由流程模板\",\r\n\"form_template\":{\"input\":\"input\",\"select\":{\"select1\":\"select1\",\"select2\":\"select2\"},\"data\":\"data\"},\r\n\"process_template\":{},\r\n\"type_id\":1,\r\n\"approval_method\":\"固定流程\",\r\n\"description\":\"lalalalalal\",\r\n\"per\":{\"department_id\":[1,2],\"staff_id\":[1,2,3]},\r\n\"company_id\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_saveEditTemplate",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_saveEditTemplate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql 练习",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/connect",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除审批模板",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_deleteTemplate?id=3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_deleteTemplate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "是否启用该模板",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_isShow?id=6&is_show=0",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_isShow"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						},
+						{
+							"key": "is_show",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除类型",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_deleteType?id=2",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_deleteType"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "审批类型列表",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_approvalTypeList",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_approvalTypeList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "审批经典模板",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_approvalClassicTemplate",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_approvalClassicTemplate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "所有已有模板数据",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_approval_existingTemplate",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_approval_existingTemplate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

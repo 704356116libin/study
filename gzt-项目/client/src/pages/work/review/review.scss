@@ -1,0 +1,95 @@
+.work-review {
+  --color: #119352;
+  --color-bg: rgb(220, 241, 234);
+  --color-hover: #15ac60;
+  height: calc( 100vh - 97px);
+  .review-sider {
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #e8e8e8;
+  } // 发起评审通
+  .review-initiate {
+    height: calc(100vh - 97px);
+    overflow-y: auto;
+    background: #fff;
+  } // .review-initiate {
+  //   background-color: var(--color);
+  //   margin: 10px 24px;
+  //   width: 160px;
+  //   &:hover,
+  //   &:focus {
+  //     background-color: var(--color-hover);
+  //     border-color: var(--color-hover);
+  //   }
+  // }
+  .ant-menu-item-selected a,
+  .ant-menu-item-active a,
+  .ant-menu-item:hover,
+  .ant-menu-item-active,
+  .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+  .ant-menu-submenu-active,
+  .ant-menu-submenu-title:hover {
+    color: var(--color)
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: var(--color-bg)
+  }
+  .ant-menu-item:after {
+    border-color: var(--color);
+  }
+  .ant-menu-sub.ant-menu-inline {
+    background: #fff;
+  }
+  .ant-menu-submenu-title:hover {
+    .ant-menu-submenu-arrow::after,
+    .ant-menu-submenu-arrow::before {
+      background: linear-gradient(to right, var(--color), var(--color));
+    }
+  }
+  .ant-card-meta-detail>div:not(:last-child) {
+    margin-bottom: 4px;
+  } // 评审通模板
+  .review-templates {
+    background: #fff;
+    .review-tempitem {
+      .ant-card-meta-detail>div:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .review-header {
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    background: #f5f5f5;
+  }
+  .review-list {
+    padding: 10px 30px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+    .review-list-title {
+      color: #333;
+    }
+  }
+  .review-list:hover,
+  .review-list.active {
+    background: #f8f8f8;
+  } // 覆盖antd默认样式
+  .modal-review {
+    .ant-modal-body {
+      padding: 0 0 24px 0;
+      overflow: hidden;
+    }
+    .modal-review-sectitle {
+      z-index: 9;
+      padding: 12px 24px;
+      box-shadow: 0 1px 3px 0px #d8d8d8;
+    }
+    .modal-review-list {
+      padding: 24px;
+      max-height: 350px;
+      overflow: auto;
+    }
+  }
+}

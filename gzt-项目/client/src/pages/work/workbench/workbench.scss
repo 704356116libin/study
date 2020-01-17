@@ -1,0 +1,76 @@
+.workbench {
+  background: #fff;
+  height: calc(100vh - 97px);
+  overflow-y: auto;
+
+  .workbench-wrapper {
+    margin: 24px auto;
+    max-width: 1200px;
+    min-width: 900px;
+  }
+
+  .workbench-title {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+  }
+
+  .ant-menu-horizontal > .ant-menu-item > a {
+    color: #333333;
+  }
+
+  .workbench-item-wrapper {
+    padding: 24px 0;
+
+    overflow: hidden;
+
+    .workbench-item {
+      float: left;
+      display: block;
+      margin-right: 60px;
+      margin-bottom: 30px;
+      padding: 12px;
+      width: 180px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        border-radius: 3px;
+        color: #fff;
+      }
+
+      .title {
+        padding: 0 12px;
+        font-size: 20px;
+        color: #333;
+      }
+
+      &.review .logo {
+        background-color: var(--review-color);
+      }
+
+      &.assist .logo {
+        background-color: var(--assist-color);
+      }
+
+      &.approval .logo {
+        background-color: var(--approval-color);
+      }
+
+      &.notice .logo {
+        background-color: var(--notice-color);
+      }
+      &.useradmins .logo {
+        background-color: rgb(0, 33, 64);
+      }
+    }
+  }
+}

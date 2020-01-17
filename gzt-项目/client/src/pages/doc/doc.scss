@@ -1,0 +1,40 @@
+.doc {
+  height: calc(100vh - 61px);
+
+  .batch-actions {
+    margin-bottom: 12px;
+    height: 30px;
+    line-height: 30px;
+
+    .actions > span {
+      margin-right: 12px;
+    }
+  }
+  .actions > span {
+    cursor: pointer;
+  }
+
+  .filename {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .icon-folder {
+    margin-right: 10px;
+    flex: 0 0 32px;
+    font-size: 32px;
+  }
+
+  .filename-text {
+    flex: auto;
+  }
+
+  .breadcrumb-item {
+    color: #333;
+    cursor: pointer;
+    &:hover {
+      color: #40a9ff;
+    }
+  }
+}

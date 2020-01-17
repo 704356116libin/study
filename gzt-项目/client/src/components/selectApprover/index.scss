@@ -1,0 +1,36 @@
+.parmary-bg {
+  background: #38adff;
+}
+
+.ant-radio-wrapper {
+  white-space: normal !important;
+}
+
+.add-node {
+  display: inline-block;
+  position: relative;
+  padding: 0 24px 0 21px;
+  vertical-align: middle;
+}
+
+.add-node::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: #cacaca;
+}
+
+.add-node::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #cacaca;
+  border-right: 3px solid transparent;
+  background: #fff;
+}

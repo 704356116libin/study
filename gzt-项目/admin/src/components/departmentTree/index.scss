@@ -1,0 +1,12 @@
+.deptree {
+  padding: 0 24px;
+  overflow: auto;
+  border-right: 10px solid #fff;
+  min-height: 100vh;
+  &.show {
+    display: block;
+  }
+  &.hide {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+.print-pdf{
+
+  .ant-modal-body {
+    padding: 24px 0;
+  }
+  
+  .pdf-wrapper {
+    canvas {
+      width: 100% !important;
+    }
+    .pdf-icon {
+      margin-left: 9px;
+      font-size: 20px;
+      color: #1890ff;
+    }
+    .nprint {
+      padding: 24px;
+    }
+  }
+
+}
+

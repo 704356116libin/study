@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "70abaf3c-f1ae-42a3-bf1c-8e7a3bf5e17f",
+		"name": "个人云盘",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "生成个人云盘",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_makeRootPath?id=14",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_makeRootPath"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新建目录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_makeDir?path=jdfhjshj&user_id=14",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_makeDir"
+					],
+					"query": [
+						{
+							"key": "path",
+							"value": "jdfhjshj"
+						},
+						{
+							"key": "user_id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "上传文件",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_uploadFile",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取指定目录下文件",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_get_directory_to_info?user_id=14&target_directory=toxiang/",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_get_directory_to_info"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "14"
+						},
+						{
+							"key": "target_directory",
+							"value": "toxiang/"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "复制文件到指定目录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_copy_file_to_path?file_id=2&target_directory=mmm/",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_copy_file_to_path"
+					],
+					"query": [
+						{
+							"key": "file_id",
+							"value": "2"
+						},
+						{
+							"key": "target_directory",
+							"value": "mmm/"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更改文件名称",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_update_file_name?file_id=1&directory=&name=",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_update_file_name"
+					],
+					"query": [
+						{
+							"key": "file_id",
+							"value": "1"
+						},
+						{
+							"key": "directory",
+							"value": ""
+						},
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除目录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/u_oss_deleteDir?user_id=14&path=hhhh",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"u_oss_deleteDir"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "14"
+						},
+						{
+							"key": "path",
+							"value": "hhhh"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,59 @@
+.ant-tree li .ant-tree-node-content-wrapper span {
+  color: #333;
+}
+.dynamic-sider {
+  height: calc(100vh - 61px);
+  box-shadow: 0px 0px 6px 0px rgba(204, 204, 204, 1);
+  background: #f9f9f9fa; // 左侧动态列表样式
+  .dynamic-list {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    user-select: none;
+    .ant-list-item-content {
+      width: 100%;
+    }
+    .ant-list-item-meta {
+      width: 100%;
+    }
+    .ant-list-item-meta-content {
+      width: calc( 100% - 58px);
+    }
+  }
+  .dynamic-close {
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    font-size: 18px;
+  }
+  .dynamic-list:hover {
+    background: rgba(0, 0, 0, .1);
+    .my-badge {
+      display: none;
+    }
+    .dynamic-close {
+      display: block;
+    }
+  }
+  .dynamic-list.active {
+    background: rgba(0, 0, 0, .1)
+  }
+}
+.dynamic-content {
+  height: calc(100vh - 61px);
+}
+.my-badge {
+  .ant-badge-count {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    height: 16px;
+    min-width: 16px;
+    line-height: 16px
+  }
+  .ant-scroll-number-only,
+  .ant-scroll-number-only>p {
+    height: 16px;
+  }
+}

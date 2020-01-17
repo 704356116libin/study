@@ -1,0 +1,83 @@
+.partner-wrapper {
+  padding-top: 64px;
+  background: #fff;
+  .siderDepartment {
+    position: fixed;
+    min-height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+    background: #fff;
+    .addGrouping {
+      margin: 24px 0;
+      padding: 0 24px;
+    }
+    .allList {
+      padding-left: 20px;
+      height: 38px;
+      line-height: 38px;
+      cursor: pointer;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+  }
+  .operatColumn {
+    display: none;
+  }
+  .partner-wrapper {
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .btn {
+    margin-left: 24px;
+  }
+  .ant-list-pagination {
+    text-align: center;
+  }
+}
+
+.addpartner-wrapper {
+  .addpartner-top {
+    padding: 0 20px;
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  .search-partner {
+    padding: 24px;
+  }
+}
+
+.partner-list {
+  padding: 0 30px;
+  line-height: 20px;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  color: #333;
+  &:hover {
+    background: #e6f7ff;
+  }
+}
+
+.partner-left-list {
+  &.active {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  &:hover {
+    background: #E6F7FE;
+  }
+  &:hover .operatColumn {
+    display: block;
+    float: right;
+    padding-right: 5px;
+  }
+}
+
+.grouplist-wrapper {
+  .ant-modal-body {
+    padding: 50px 24px 0 24px;
+    .ant-list-sm .ant-list-item {
+      padding: 5px 0;
+    }
+  }
+}

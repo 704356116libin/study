@@ -1,0 +1,47 @@
+$primary-color: #1890ff;
+
+.invite-wrapper {
+  .re-input {
+    border: none;
+    outline: none;
+  }
+
+  .invite-info {
+    color: #000;
+    font-size: 24px;
+
+    .name {
+      color: $primary-color;
+    }
+  }
+
+  .invite-form {
+    margin: 3% auto 0;
+    padding: 24px 0;
+    width: 540px;
+    box-shadow: 0 0 5px rgba(26, 26, 26, 0.2);
+    border-radius: 2px;
+    .invite-input {
+      padding: 10px 0;
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      line-height: 1.6em;
+      color: #646464;
+      font-size: 14px;
+    }
+    .captcha,
+    .code-mess {
+      display: inline-block;
+      width: 70%;
+    }
+    .captcha-img {
+      display: inline-block;
+      width: 30%;
+    }
+
+    .ant-input:focus {
+      border-color: #40a9ff;
+      box-shadow: none;
+    }
+  }
+}

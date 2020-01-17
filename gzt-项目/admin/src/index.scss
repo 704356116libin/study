@@ -1,0 +1,122 @@
+$primary-color: #1890ff; // 全局主色
+.primary-color {
+  color: $primary-color;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  margin-top: 10px;
+  padding: 24px;
+  padding-top: 64px;
+  background: #fff;
+}
+
+.btn {
+  margin-right: 20px;
+}
+
+.white {
+  background: #fff;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// 自定义滚动条~hover显示
+.beautiful-scroll-bar-hover {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: #c6d0da;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: transparent;
+    &:hover {
+      background: #b5bec7;
+    }
+    &:active {
+      background: #9ea1a5;
+    }
+  }
+}
+
+.overflow-ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 拖拽样式start */
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  height: 36px; // opacity: 0.9;
+  // filter: alpha(opacity=80);
+  cursor: move;
+  cursor: grabbing;
+  box-shadow: 0px 4px 9px 0px #ccc;
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+/* 拖拽样式end */
+// 返回按钮样式
+.goback {
+  padding: 6px 12px;
+  color: #5f6368;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+  i {
+    padding-right: 8px;
+  }
+  &:hover {
+    background: #eee;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ee-main {
+  transition: padding 0.2s;
+}

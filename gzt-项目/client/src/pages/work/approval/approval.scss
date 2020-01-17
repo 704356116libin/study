@@ -1,0 +1,47 @@
+#work-approval {
+  background: #fff;
+  .ant-menu-inline .ant-menu-item {
+    margin-top: 0;
+  }
+  .approvalList {
+    padding: 20px 30px;
+    border-bottom: 1px solid #ebedf0;
+    cursor: pointer;
+  }
+  .creatApproval {
+    display: inline-block;
+    padding: 0 54px;
+    height: 32px;
+    line-height: 32px;
+    margin: 16px 0;
+    background: rgba(218, 239, 254, 1);
+    border-radius: 3px;
+  }
+  .ant-drawer-content-wrapper {
+    top: 97px;
+    height: calc(100% - 97px);
+  }
+  .approvalList:hover,
+  .approvalList.active {
+    background: rgba(230, 247, 255, 0.5);
+  }
+  .ant-list-pagination {
+    text-align: center;
+  }
+  .ant-input-affix-wrapper .ant-input-prefix {
+    left: 17px;
+  }
+  .ant-list-pagination {
+    text-align: center !important;
+  }
+  .templateBox:hover .ant-card-bordered {
+    border: 1px solid #3296fa;
+  }
+  .pdf-wrapper {
+    color: red;
+    width: 100% !important;
+  }
+  .ant-layout{
+    background: #fff;
+  }
+}

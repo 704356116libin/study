@@ -1,0 +1,16 @@
+$basecolor:#38adff;
+.sort-wrapper {
+  .listWrapper {
+    margin-top: 10px;
+    .sortList {
+      padding: 13px 30px;
+      border: 1px solid #eee;
+      border-left: none;
+      border-right: none;
+    }
+    .sortIcon {
+      padding-right: 15px;
+      color: $basecolor;
+    }
+  }
+}

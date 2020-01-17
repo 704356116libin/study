@@ -1,0 +1,894 @@
+{
+	"info": {
+		"_postman_id": "a3aa8950-f37a-4be4-bb4f-cf7f853048f5",
+		"name": "公告",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "公告栏目",
+			"item": [
+				{
+					"name": "添加栏目",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Accept}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://{{host}}/api/c_notice_addColumn?company_id=YrnP3p11545&name=高管专栏6666&description=333",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_notice_addColumn"
+							],
+							"query": [
+								{
+									"key": "company_id",
+									"value": "YrnP3p11545"
+								},
+								{
+									"key": "name",
+									"value": "高管专栏6666"
+								},
+								{
+									"key": "description",
+									"value": "333"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除公告栏目",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_notice_removeColumn?column_id=Ric4sx78234&company_id=6UIzGY11545",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_notice_removeColumn"
+							],
+							"query": [
+								{
+									"key": "column_id",
+									"value": "Ric4sx78234"
+								},
+								{
+									"key": "company_id",
+									"value": "6UIzGY11545"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "栏目排序",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_notice_sortColumn?sort_json={\"meT7MT21072\":1,\"DgrAzS11545\":2,\"KFOdis30599\":3,\"PedF2y68707\":4}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_notice_sortColumn"
+							],
+							"query": [
+								{
+									"key": "sort_json",
+									"value": "{\"meT7MT21072\":1,\"DgrAzS11545\":2,\"KFOdis30599\":3,\"PedF2y68707\":4}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所有公告栏目信息",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_notice_getAllColumn?company_id=6UIzGY11545",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_notice_getAllColumn"
+							],
+							"query": [
+								{
+									"key": "company_id",
+									"value": "6UIzGY11545"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更改栏目",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_notice_alterColumn?column_id=TL3f6e11545&name=更改了",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_notice_alterColumn"
+							],
+							"query": [
+								{
+									"key": "column_id",
+									"value": "TL3f6e11545"
+								},
+								{
+									"key": "name",
+									"value": "更改了"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "撤销某个公告",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{accesstoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{host}}/api/c_notice_cancelNotice?notice_id=NBaoHE21072",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"c_notice_cancelNotice"
+							],
+							"query": [
+								{
+									"key": "notice_id",
+									"value": "NBaoHE21072"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://{{host}}/sortTest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/sortTest?now_page=3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"sortTest"
+					],
+					"query": [
+						{
+							"key": "now_page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "添加企业公告",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"c_notice_column_id\": \"TL7ke2211612\",\r\n\"company_id\": \"KGR0w611545\",\r\n\"content\": \"<p>6+</p><p>36</p><p></p>\",\r\n\"guard_json\": {\r\n\t\"department_ids\": [32, 33],\r\n\t\"user_ids\": [8]\r\n},\r\n\"operate_type\": \"save\",\r\n\"title\": \"62\",\r\n\"type\": \"哈哈哈22222\",\r\n\"updatingfiles\": [],\r\n\"way\": [\"站内通知\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_add?",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_add"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "企业公告",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "公告title",
+							"disabled": true
+						},
+						{
+							"key": "content",
+							"value": "12月放假通知",
+							"disabled": true
+						},
+						{
+							"key": "company_id",
+							"value": "o15vJN11545",
+							"disabled": true
+						},
+						{
+							"key": "operate_type",
+							"value": "save",
+							"disabled": true
+						},
+						{
+							"key": "guard_json",
+							"value": "{\"department_ids\":[32,33],\"user_ids\":[3,4]}",
+							"disabled": true
+						},
+						{
+							"key": "c_notice_column_id",
+							"value": "TL3f6e11545",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "移除某个公告",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_remove?notice_id=6aymKr78234",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_remove"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "6aymKr78234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "置顶某个公告",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_top?notice_id=NBaoHE21072",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_top"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "NBaoHE21072"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取某公司，某用户的所有可见公告(分页)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_show?now_page=2&page_size=4&company_id=o15vJN11545",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_show"
+					],
+					"query": [
+						{
+							"key": "now_page",
+							"value": "2"
+						},
+						{
+							"key": "page_size",
+							"value": "4"
+						},
+						{
+							"key": "company_id",
+							"value": "o15vJN11545"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取单个公告详情",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_getNoticeById?notice_id=ke6C2x21072",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_getNoticeById"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "ke6C2x21072"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "关注公告",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_followNotice?notice_id=bQrPRI30599",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_followNotice"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "bQrPRI30599"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取消关注某公告",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_deFollowNotice?notice_id=bQrPRI30599",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_deFollowNotice"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "bQrPRI30599"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取所有已撤销的公告(草稿箱/分页)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_getCancelNotice?company_id=QpXc1G21072",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_getCancelNotice"
+					],
+					"query": [
+						{
+							"key": "company_id",
+							"value": "QpXc1G21072"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新某公告信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_updateNotice?notice_id=mKTiBP21072&content=6666",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_updateNotice"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "mKTiBP21072"
+						},
+						{
+							"key": "content",
+							"value": "6666"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "通过栏目获取某用户可见公告",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_showByColumn?now_page=1&page_size=10&company_id=o15vJN11545&type=企业公告",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_showByColumn"
+					],
+					"query": [
+						{
+							"key": "now_page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						},
+						{
+							"key": "company_id",
+							"value": "o15vJN11545"
+						},
+						{
+							"key": "type",
+							"value": "企业公告"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "通过标题搜索公告",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_searchNoticeByTitle?title=2&company_id=XJed4t11545",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_searchNoticeByTitle"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "2"
+						},
+						{
+							"key": "company_id",
+							"value": "XJed4t11545"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取某用户在某企业下的所关注的公告列表",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_user_follows?now_page=1&page_size=10&company_id=o15vJN11545",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_user_follows"
+					],
+					"query": [
+						{
+							"key": "now_page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						},
+						{
+							"key": "company_id",
+							"value": "o15vJN11545"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取某条公告的未读记录",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_notice_unbrowse_record?notice_id=XStmsW183031",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_notice_unbrowse_record"
+					],
+					"query": [
+						{
+							"key": "notice_id",
+							"value": "XStmsW183031"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

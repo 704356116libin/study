@@ -1,0 +1,12 @@
+.tree-contact {
+  .ant-tabs-nav .ant-tabs-tab {
+    margin: 0;
+  }
+  .ant-tabs-bar {
+    margin: 0;
+  }
+
+  .ant-tabs-content{
+    height: calc(100% - 44px);
+  }
+}

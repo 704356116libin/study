@@ -1,0 +1,88 @@
+$barHeight: 32px;
+.position-sticky {
+  top: 46px;
+  position: sticky;
+  z-index: 9;
+}
+
+.review-report-create {
+  position: relative;
+  overflow-x: auto !important;
+  overflow-y: auto;
+  .review-report-header {
+    padding: 0 20px;
+    height: 56px;
+    line-height: 56px;
+    border: 1px solid #eee;
+  }
+  .review-report-main {
+    min-width: 1420px;
+  }
+  .create-report {
+    .bf-controlbar {
+      top: -1px;
+      position: sticky;
+      z-index: 199;
+      padding-left: calc(50% - 465px);
+      background: #fff;
+    }
+    &.fullscreen {
+      .bf-controlbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+      }
+      .bf-content {
+        margin-top: 46px;
+      }
+      .DraftEditor-root {
+        margin: 0 auto;
+      }
+    }
+    .bf-content {
+      width: 100%;
+      padding: 24px;
+      max-height: initial;
+      overflow-y: auto;
+    }
+    .DraftEditor-root {
+      margin: 0 0 80px 480px;
+      padding: 24px;
+      width: 750px;
+      height: initial;
+      border: 1px solid #d8d8d8;
+    }
+    .bf-dropdown .dropdown-handler:hover,
+    .bf-dropdown.active .dropdown-handler,
+    .bf-controlbar .control-item.button:hover {
+      box-shadow: 0px 0px 0px 1px #d6d6d6 inset
+    }
+    .bf-controlbar .control-item.button {
+      min-width: 32px;
+      padding: 0 6px;
+    }
+    .bf-controlbar .control-item {
+      height: $barHeight;
+      margin: 10px 0;
+    }
+    .bf-dropdown .dropdown-handler {
+      height: $barHeight;
+    }
+    .bf-dropdown .dropdown-handler>span {
+      line-height: $barHeight;
+    }
+    .bf-dropdown .dropdown-handler .bfi-drop-down {
+      height: $barHeight;
+      line-height: $barHeight;
+    }
+    .bf-controlbar .separator-line {
+      height: 20px;
+      margin: 16px 8px;
+    }
+    .bf-controlbar .control-item.button i:before {
+      height: $barHeight;
+      line-height: $barHeight;
+    }
+  }
+}

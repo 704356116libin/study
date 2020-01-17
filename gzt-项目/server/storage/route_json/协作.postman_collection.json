@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "4dc3f6d6-999e-4c68-a7e9-91bbcb707ab9",
+		"name": "协作",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "发起协作任务",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\":\"123ttt\",\r\n\"description\":\"哈gfjkdj恢复\",\r\n\"formArea\":[1],\r\n\"limitTime\":\"unlimited\",\r\n\"formEdit\":true,\r\n\"annex\": [\"www\"],\r\n\"content\": \"<p>fsdfsdfsd</p>\",\r\n\"notification\": [\"实时通知\"],\r\n\"formPeople\": [\"参与人\"],\r\n\"participantsId\": \"6,3,1\",\r\n\"principalId\":6\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_sendInvite",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_sendInvite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "协作附件上传",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file",
+						"value": "file",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "name",
+							"value": "协作任务1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}/api/testCollaborative",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"testCollaborative"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "redis",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gzt.test/triggeralarm",
+					"protocol": "http",
+					"host": [
+						"gzt",
+						"test"
+					],
+					"path": [
+						"triggeralarm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "搜索查询",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_search?status=all&title=1&offset=0&limit=2",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "all"
+						},
+						{
+							"key": "title",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "任务详情",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_taskDetail?id=3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_taskDetail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "编辑任务",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":1,\r\n\"title\":\"123ttt\",\r\n\"description\":\"哈gfjkdj恢复\",\r\n\"formArea\":[1],\r\n\"limitTime\":\"2018-12-19 18:33:20\",\r\n\"formEdit\":true,\r\n\"annex\": \"www\",\r\n\"content\": \"<p>fsdfsdfsd</p>\",\r\n\"notification\": [\"实时通知\"],\r\n\"formPeople\": [\"参与人\"],\r\n\"participantsId\": \"1,3\",\r\n\"principalId\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_editTask",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_editTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "协助列表",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_taskList?status=all&type=involved&offset=3&limit=1",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_taskList"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "all"
+						},
+						{
+							"key": "type",
+							"value": "involved"
+						},
+						{
+							"key": "offset",
+							"value": "3"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "测试",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/testCollaborative?title=%&offset=0&limit=10&id=4",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"testCollaborative"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "%"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "点击接受",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_receiveButton?id=2&identy=参与人",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_receiveButton"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "identy",
+							"value": "参与人"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "点击拒绝",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_rejectButton?id=2&identy=参与人",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_rejectButton"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "identy",
+							"value": "参与人"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "点击完成",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_carryOutButton?identy=发起人&id=2&opinion=拉拉啊拉",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_carryOutButton"
+					],
+					"query": [
+						{
+							"key": "identy",
+							"value": "发起人"
+						},
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "opinion",
+							"value": "拉拉啊拉"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "审核操作",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{accesstoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{host}}/api/c_assist_auditButton?id=2&isAgree=0",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"c_assist_auditButton"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "isAgree",
+							"value": "0",
+							"description": "1是同意"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

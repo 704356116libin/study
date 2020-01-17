@@ -1,0 +1,38 @@
+.Wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background: #f9f9f9;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.12);
+  .Close {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .Avatar {
+    margin-top: 8px;
+  }
+  .Name {
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &:hover {
+    background: rgba(236, 244, 249, 1);
+  }
+  &:hover .Close {
+    display: block;
+  }
+}

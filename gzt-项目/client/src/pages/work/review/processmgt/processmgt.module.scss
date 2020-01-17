@@ -1,0 +1,28 @@
+.groupBtn {
+  margin-left: 30px;
+}
+
+.create {
+  margin-top: 14px;
+  margin-right: 30px;
+  float: right;
+}
+
+.header {
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 #ccc;
+}
+
+.processList {
+  padding: 0 30px 30px;
+  overflow-y: auto;
+}
+.processGroupItem{
+  padding: 12px 24px;
+  border-bottom: 1px solid #ddd;
+  user-select: none;
+  &.active{
+    background-color: #d7eefe;
+  }
+}

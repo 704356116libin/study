@@ -1,0 +1,164 @@
+.buy-sms {
+  padding: 0 24px;
+
+  .show {
+    margin-top: 64px;
+    width: 1150px;
+    height: 810px;
+    border: 1px solid red;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 24px 0;
+
+  }
+
+  .gutter-box.active {
+    background: url(../../assets/img/xuanzhong.png) right top no-repeat;
+  }
+
+  .btn-month.active {
+    background: #26A0FD;
+    color: white;
+  }
+
+  .btn-month {
+    float: left;
+    width: 150px;
+    height: 58px;
+    line-height: 58px;
+    background: white;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 29px;
+    border: 1px solid #cccccc;
+  }
+
+  .gutter-example {
+
+    margin-top: 20px;
+    margin-left: 28px;
+  }
+
+  .gutter-example button {
+    width: 150px;
+    height: 58px;
+    border-radius: 3px;
+    margin-right: 29px;
+  }
+
+  .gutter-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #26A0FD;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .number {
+    margin-top: 19px;
+    font-size: 24px;
+  }
+
+  .money {
+    margin-top: 6px;
+    font-size: 18px;
+  }
+
+  .duration {
+    margin-top: 19px;
+    margin-bottom: 29px;
+    overflow: hidden;
+    margin-left: 28px;
+  }
+
+  .pay-name {
+    width: 426px;
+    margin-left: 28px;
+    border: 1px solid #eeeeee;
+
+  }
+
+  .code img {
+    width: 164px;
+    height: 164px;
+    border: 1px solid #dcdcdc;
+  }
+
+  .introduce {
+    font-size: 18px;
+  }
+
+  .introduce a {
+    color: #ec971f;
+  }
+
+  .initiate {
+    margin-top: 33px;
+    margin-bottom: 63px;
+  }
+
+  .initiate button {
+    width: 170px;
+    height: 58px;
+    border-radius: 3px;
+  }
+
+  .heading {
+    display: inline-block;
+    width: 120px;
+
+    vertical-align: middle;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+  }
+
+  .price {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+  }
+
+  .date {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+  }
+
+  .price a {
+    color: #ec971f;
+    font-size: 22px;
+  }
+
+  .price span {
+    text-decoration: line-through;
+  }
+
+  .prompt {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+  /*.project {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+  }
+  .detail {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+  }*/
+}

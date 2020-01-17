@@ -1,0 +1,38 @@
+.workbench-header{
+    // z-index: 899;
+    // top: 61px;
+    // position: sticky;
+    height: 36px;
+    line-height: 36px;
+    background: #dee1e6;
+
+    > div{
+
+        float: left;
+        border-right: 1px solid #a2a6ab;
+        
+        > a {
+            color: #000;
+        }
+        i{
+            color: '#63676c'
+        }
+    }
+    .company{
+        float: right;
+        background: #917dd6;
+        color: #fff;
+    }
+
+    >div.active,>div:hover{
+        background: #6e78f9;
+
+        a{
+            color: #fff; 
+        }
+        i{
+            color: #fff;
+        }
+    }
+
+}

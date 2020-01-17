@@ -1,0 +1,45 @@
+$border: 1px solid #e8e8e8;
+.review-detail {
+  background-color: #fff;
+  .review-detail-main {
+    display: flex;
+    .review-detail-tabs {
+      flex: auto;
+
+      .ant-tabs-content {
+        height: calc(100% - 60px);
+      }
+      .ant-tabs-tabpane {
+        overflow-y: auto;
+      }
+    }
+    .review-detail-timeline {
+      flex: 0 0 auto;
+      border-left: $border;
+      .review-detail-timeline-title {
+        padding-left: 24px;
+        line-height: 45px;
+        color: #222;
+      }
+    }
+  }
+  .review-detail-footer {
+    border-top: $border;
+    background-color: #fff;
+    .ant-btn {
+      margin-right: 16px;
+    }
+  }
+}
+.review-export-item:hover .export-close {
+  display: block;
+}
+.export-close {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  text-align: center;
+}
